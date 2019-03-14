@@ -1,12 +1,12 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+Project 1
+-Projects
+-Ideas
+-Games
+-Random Programs
 ------------------------------------------------------------------------
 
-PROJECT TITLE: Paul and Chris Collab
-PURPOSE OF PROJECT: 
-VERSION or DATE: 
-HOW TO START THIS PROJECT:
+PROJECT TITLE: Project 1
+PURPOSE OF PROJECT: To make a place to keep ideas and projects.
+VERSION or DATE: Began on March 14, 2019
 AUTHORS: Chris Choi; Paul Choi
-USER INSTRUCTIONS:
