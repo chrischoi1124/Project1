@@ -86,15 +86,38 @@ public class Encryptor
             {
                 encryption = encryption + "U";
             }
+            
+            if (message.compareTo("H") == 0)
+            {
+                encryption = encryption + "I";
+            }
+            
+            if (message.compareTo("I") == 0)
+            {
+                encryption = encryption + "O";
+            }
+            
+            if (message.compareTo("J") == 0)
+            {
+                encryption = encryption + "P";
+            }
+            
+            if (message.compareTo("K") == 0)
+            {
+                encryption = encryption + "A";
+            }
+            
+            if (message.compareTo("L") == 0)
+            {
+                encryption = encryption + "S";
+            }
+            
+            if (message.compareTo("M") == 0)
+            {
+                encryption = encryption + "D";
+            }
         }
-        
-        /*
-        msg = msg.replace("H", "I");
-        msg = msg.replace("I", "O");
-        msg = msg.replace("J", "P");
-        msg = msg.replace("K", "A");
-        msg = msg.replace("L", "S");
-        msg = msg.replace("M", "D");
+      /*
         msg = msg.replace("N", "F");
         msg = msg.replace("O", "G");
         msg = msg.replace("P", "H");
