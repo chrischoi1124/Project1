@@ -1,32 +1,115 @@
 import java.util.Scanner;
 
 /**
- * A program that will encrypt and decrypt a imputed message.
+ * 
  *
  * @author Chris Choi
- * @version 3/29/2019
+ * @version 3/29/19
  */
 public class Encryptor
 {
-    //Scanner is defined here.
-    Scanner scanner = new Scanner(System.in);
+    //Global Variables
+    private static int preset;
+    private static String encryption = "";
     
-    //Global variables
-    public static int num;
-    
-    //Main
-    public static void main (String args []){
-        //Generates a random number between 10 into int "num".
-        num = (int)(Math.random() * 10) + 1;
-        
-        //Prints line with the randomly generated number from int "num".
-        System.out.println(num);
+    //Encryption
+    public static void encryptMessage(String msg)
+    {
+        preset1(msg);
+        System.out.println(encryption);
     }
     
-    //Encrypter
-    public String encryptor (String msg){
+    //Decryption
+    public void decryptMessage(String msg)
+    {
         
-        //Currently returns null because it is not complete.
-        return null;
+    }
+    
+    //Main
+    public static void main (String [] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Input message:");
+        String msg = scanner.nextLine();
+        
+        encryptMessage(msg);
+    }
+    
+    //Preset 1
+    public static void preset1(String msg)
+    {
+        //Makes the parameter msg all uppercase.
+        msg = msg.toUpperCase();
+        
+        //Creates variable message.
+        String message;
+        
+        //For loop to go through the entire message
+        for (int i = 0; i < msg.length(); i++)
+        {          
+            //Cuts the message to one letter.
+            message = msg.substring(i, i + 1); 
+            
+            //Determines whether the letter is A, B, C... Z and replaces it with Q, W, E... M.
+            if (message.compareTo("A") == 0)
+            {
+                encryption = encryption + "Q";
+            }
+            
+            if (message.compareTo("B") == 0)
+            {
+                encryption = encryption + "W";
+            }
+            
+            if (message.compareTo("C") == 0)
+            {
+                encryption = encryption + "E";
+            }
+            
+            if (message.compareTo("C") == 0)
+            {
+                encryption = encryption + "R";
+            }
+            
+            if (message.compareTo("E") == 0)
+            {
+                encryption = encryption + "T";
+            }
+            
+            if (message.compareTo("F") == 0)
+            {
+                encryption = encryption + "Y";
+            }
+            
+            if (message.compareTo("G") == 0)
+            {
+                encryption = encryption + "U";
+            }
+        }
+        
+        /*
+        msg = msg.replace("H", "I");
+        msg = msg.replace("I", "O");
+        msg = msg.replace("J", "P");
+        msg = msg.replace("K", "A");
+        msg = msg.replace("L", "S");
+        msg = msg.replace("M", "D");
+        msg = msg.replace("N", "F");
+        msg = msg.replace("O", "G");
+        msg = msg.replace("P", "H");
+        msg = msg.replace("Q", "J");
+        msg = msg.replace("R", "K");
+        msg = msg.replace("S", "L");
+        msg = msg.replace("T", "Z");
+        msg = msg.replace("U", "X");
+        msg = msg.replace("V", "C");
+        msg = msg.replace("W", "V");
+        msg = msg.replace("X", "B");
+        msg = msg.replace("Y", "N");
+        msg = msg.replace("Z", "M");
+        
+        message = msg;
+        */
     }
 }
