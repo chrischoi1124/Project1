@@ -325,6 +325,11 @@ public class Encryptor
                 encryption = encryption + "@";
             }
             
+            if (message.compareTo("*") == 0)
+            {
+                encryption = encryption + "*";
+            }
+            
             if (message.compareTo("+") == 0)
             {
                 encryption = encryption + "+";
