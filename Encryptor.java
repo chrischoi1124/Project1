@@ -1,18 +1,18 @@
-import java.util.Scanner;
-
-/**
- * 
- *
- * @author Chris Choi
- * @version 3/29/19
- */
+    import java.util.Scanner;
+    
+    /**
+    * 
+    *
+    * @author Chris Choi
+    * @version 3/29/19
+    */
 public class Encryptor
 {
     //Global Variables
     private static int preset = 0;
     private static String userMessage = "";
     private static String encryption = "";
-    
+
     //Encryption
     public static void encryptMessage(String msg)
     {
@@ -20,25 +20,25 @@ public class Encryptor
         {
             preset1(msg);
         }
-        
+    
         System.out.println(encryption);
     }
-    
+
     //Decryption
     public void decryptMessage(String msg)
     {
-        
-    }
     
+    }
+
     //Main
     public static void main (String [] args)
     {
         //Variables
         boolean presetValid = false;
-        
+    
         //Creates new scanner.
         Scanner scanner = new Scanner(System.in);
-        
+    
         //While loop to check validity
         while (presetValid == false)
         {
@@ -51,6 +51,11 @@ public class Encryptor
             switch(preset)
             {
                 case 1:
+                    //Lets user input the message they want to encrypt or decrypt.
+                    System.out.println("Input message:");
+                    userMessage = scanner.nextLine();
+                    userMessage = scanner.nextLine();
+                    
                     //Sends message to "encryptMessage".
                     encryptMessage(userMessage);
                     presetValid = true;
@@ -62,10 +67,6 @@ public class Encryptor
             }
         }
         
-        //Lets user input the message they want to encrypt or decrypt.
-        System.out.println("Input message:");
-        userMessage = scanner.nextLine();
-        userMessage = scanner.nextLine();
     }
     
     //Preset 1
@@ -219,6 +220,16 @@ public class Encryptor
                 encryption = encryption + " ";
             }
             
+            if (message.compareTo("'") == 0)
+            {
+                encryption = encryption + "'";
+            }
+            
+            if (message.compareTo("/") == 0)
+            {
+                encryption = encryption + "/";
+            }
+            
             if (message.compareTo(",") == 0)
             {
                 encryption = encryption + ",";
@@ -247,6 +258,56 @@ public class Encryptor
             if (message.compareTo(")") == 0)
             {
                 encryption = encryption + ")";
+            }
+            
+            if (message.compareTo("[") == 0)
+            {
+                encryption = encryption + "[";
+            }
+            
+            if (message.compareTo("]") == 0)
+            {
+                encryption = encryption + "]";
+            }
+            
+            if (message.compareTo("{") == 0)
+            {
+                encryption = encryption + "{";
+            }
+            
+            if (message.compareTo("}") == 0)
+            {
+                encryption = encryption + "}";
+            }
+            
+            if (message.compareTo("\\") == 0)
+            {
+                encryption = encryption + "\\";
+            }
+            
+            if (message.compareTo("|") == 0)
+            {
+                encryption = encryption + "|";
+            }
+            
+            if (message.compareTo(":") == 0)
+            {
+                encryption = encryption + ":";
+            }
+            
+            if (message.compareTo(";") == 0)
+            {
+                encryption = encryption + ";";
+            }
+            
+            if (message.compareTo("<") == 0)
+            {
+                encryption = encryption + "<";
+            }
+            
+            if (message.compareTo(">") == 0)
+            {
+                encryption = encryption + ">";
             }
             
             if (message.compareTo("$") == 0)
@@ -282,6 +343,16 @@ public class Encryptor
             if (message.compareTo("#") == 0)
             {
                 encryption = encryption + "#";
+            }
+            
+            if (message.compareTo("^") == 0)
+            {
+                encryption = encryption + "^";
+            }
+            
+            if (message.compareTo("&") == 0)
+            {
+                encryption = encryption + "&";
             }
             
             if (message.compareTo("1") == 0)
