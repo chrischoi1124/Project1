@@ -9,13 +9,18 @@ import java.util.Scanner;
 public class Encryptor
 {
     //Global Variables
-    private static int preset;
+    private static int preset = 0;
+    private static String userMessage = "";
     private static String encryption = "";
     
     //Encryption
     public static void encryptMessage(String msg)
     {
-        preset1(msg);
+        if (preset == 1)
+        {
+            preset1(msg);
+        }
+        
         System.out.println(encryption);
     }
     
@@ -28,12 +33,39 @@ public class Encryptor
     //Main
     public static void main (String [] args)
     {
+        //Variables
+        boolean presetValid = false;
+        
+        //Creates new scanner.
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Input message:");
-        String msg = scanner.nextLine();
+        //While loop to check validity
+        while (presetValid == false)
+        {
+            //Lets user choose what preset they want to use.
+            System.out.println("Select Preset");
+            System.out.println("1 - Preset 1");
+            preset = scanner.nextInt();
+
+            //Switch statement
+            switch(preset)
+            {
+                case 1:
+                    //Sends message to "encryptMessage".
+                    encryptMessage(userMessage);
+                    presetValid = true;
+                    break;
+                
+                default:
+                    System.out.println("That is an invalid preset.");
+                    break;
+            }
+        }
         
-        encryptMessage(msg);
+        //Lets user input the message they want to encrypt or decrypt.
+        System.out.println("Input message:");
+        userMessage = scanner.nextLine();
+        userMessage = scanner.nextLine();
     }
     
     //Preset 1
@@ -67,7 +99,7 @@ public class Encryptor
                 encryption = encryption + "E";
             }
             
-            if (message.compareTo("C") == 0)
+            if (message.compareTo("D") == 0)
             {
                 encryption = encryption + "R";
             }
@@ -116,23 +148,191 @@ public class Encryptor
             {
                 encryption = encryption + "D";
             }
+            
+            if (message.compareTo("N") == 0)
+            {
+                encryption = encryption + "F";
+            }
+            
+            if (message.compareTo("O") == 0)
+            {
+                encryption = encryption + "G";
+            }
+            
+            if (message.compareTo("P") == 0)
+            {
+                encryption = encryption + "H";
+            }
+            
+            if (message.compareTo("Q") == 0)
+            {
+                encryption = encryption + "J";
+            }
+            
+            if (message.compareTo("R") == 0)
+            {
+                encryption = encryption + "K";
+            }
+            
+            if (message.compareTo("S") == 0)
+            {
+                encryption = encryption + "L";
+            }
+            
+            if (message.compareTo("T") == 0)
+            {
+                encryption = encryption + "Z";
+            }
+            
+            if (message.compareTo("U") == 0)
+            {
+                encryption = encryption + "X";
+            }
+            
+            if (message.compareTo("V") == 0)
+            {
+                encryption = encryption + "C";
+            }
+            
+            if (message.compareTo("W") == 0)
+            {
+                encryption = encryption + "V";
+            }
+            
+            if (message.compareTo("X") == 0)
+            {
+                encryption = encryption + "B";
+            }
+            
+            if (message.compareTo("Y") == 0)
+            {
+                encryption = encryption + "N";
+            }
+            
+            if (message.compareTo("Z") == 0)
+            {
+                encryption = encryption + "M";
+            }
+            
+            if (message.compareTo(" ") == 0)
+            {
+                encryption = encryption + " ";
+            }
+            
+            if (message.compareTo(",") == 0)
+            {
+                encryption = encryption + ",";
+            }
+            
+            if (message.compareTo(".") == 0)
+            {
+                encryption = encryption + ".";
+            }
+            
+            if (message.compareTo("!") == 0)
+            {
+                encryption = encryption + "!";
+            }
+            
+            if (message.compareTo("?") == 0)
+            {
+                encryption = encryption + "?";
+            }
+            
+            if (message.compareTo("(") == 0)
+            {
+                encryption = encryption + "(";
+            }
+            
+            if (message.compareTo(")") == 0)
+            {
+                encryption = encryption + ")";
+            }
+            
+            if (message.compareTo("$") == 0)
+            {
+                encryption = encryption + "$";
+            }
+            
+            if (message.compareTo("%") == 0)
+            {
+                encryption = encryption + "%";
+            }
+            
+            if (message.compareTo("@") == 0)
+            {
+                encryption = encryption + "@";
+            }
+            
+            if (message.compareTo("+") == 0)
+            {
+                encryption = encryption + "+";
+            }
+            
+            if (message.compareTo("-") == 0)
+            {
+                encryption = encryption + "-";
+            }
+            
+            if (message.compareTo("=") == 0)
+            {
+                encryption = encryption + "=";
+            }
+            
+            if (message.compareTo("#") == 0)
+            {
+                encryption = encryption + "#";
+            }
+            
+            if (message.compareTo("1") == 0)
+            {
+                encryption = encryption + "3";
+            }
+            
+            if (message.compareTo("2") == 0)
+            {
+                encryption = encryption + "1";
+            }
+            
+            if (message.compareTo("3") == 0)
+            {
+                encryption = encryption + "0";
+            }
+            
+            if (message.compareTo("4") == 0)
+            {
+                encryption = encryption + "2";
+            }
+            
+            if (message.compareTo("5") == 0)
+            {
+                encryption = encryption + "7";
+            }
+            
+            if (message.compareTo("6") == 0)
+            {
+                encryption = encryption + "9";
+            }
+            
+            if (message.compareTo("7") == 0)
+            {
+                encryption = encryption + "8";
+            }
+            
+            if (message.compareTo("8") == 0)
+            {
+                encryption = encryption + "5";
+            }
+            
+            if (message.compareTo("9") == 0)
+            {
+                encryption = encryption + "6";
+            }
+            
+            if (message.compareTo("0") == 0)
+            {
+                encryption = encryption + "4";
+            }
         }
-      /*
-        msg = msg.replace("N", "F");
-        msg = msg.replace("O", "G");
-        msg = msg.replace("P", "H");
-        msg = msg.replace("Q", "J");
-        msg = msg.replace("R", "K");
-        msg = msg.replace("S", "L");
-        msg = msg.replace("T", "Z");
-        msg = msg.replace("U", "X");
-        msg = msg.replace("V", "C");
-        msg = msg.replace("W", "V");
-        msg = msg.replace("X", "B");
-        msg = msg.replace("Y", "N");
-        msg = msg.replace("Z", "M");
-        
-        message = msg;
-        */
     }
 }
